@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>主管题复习资料</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+  :root {
+    --bg: #faf8f5;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --text-secondary: #555;
+    --text-tertiary: #888;
+    --accent: #8b5e3c;
+    --accent-light: #c9a87c;
+    --border: #e8e2d8;
+    --tag-bg: #f5f0e8;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 24px rgba(0,0,0,0.06);
+    --radius: 2px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 17px;
+  }
+
+  body {
+    font-family: 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 80px 32px 120px;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    position: relative;
+    margin-bottom: 72px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 72px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .hero-label {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: var(--text);
+  }
+
+  .hero h1 span {
+    display: block;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-top: 8px;
+    letter-spacing: 0.08em;
+  }
+
+  /* ── Section Title ── */
+  .section-title {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 64px 0 28px;
+    padding-left: 20px;
+    border-left: 3px solid var(--accent);
+    line-height: 1.4;
+  }
+
+  .section-title:first-of-type {
+    margin-top: 0;
+  }
+
+  /* ── Sub-section Title ── */
+  .sub-title {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 36px 0 14px;
+    letter-spacing: 0.05em;
+  }
+
+  .sub-title--minor {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin: 24px 0 10px;
+  }
+
+  /* ── Paragraph ── */
+  p {
+    margin-bottom: 16px;
+    text-align: justify;
+    text-indent: 2em;
+  }
+
+  p.no-indent {
+    text-indent: 0;
+  }
+
+  /* ── Card ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    margin: 20px 0;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .card-title {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  /* ── Table ── */
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 20px 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+
+  thead {
+    background: #faf7f2;
+  }
+
+  th {
+    font-weight: 600;
+    color: var(--accent);
+    text-align: left;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    vertical-align: top;
+    font-size: 0.8rem;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* ── List ── */
+  ul, ol {
+    margin: 10px 0 18px 0;
+    padding-left: 24px;
+  }
+
+  li {
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+  }
+
+  li strong {
+    color: var(--text);
+  }
+
+  /* ── Highlight ── */
+  .highlight {
+    background: linear-gradient(180deg, transparent 60%, rgba(201, 168, 124, 0.22) 60%);
+    padding: 0 2px;
+  }
+
+  /* ── Divider ── */
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    margin: 48px 0;
+    position: relative;
+  }
+
+  .divider::after {
+    content: '◆';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg);
+    padding: 0 16px;
+    color: var(--accent-light);
+    font-size: 0.6rem;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 0.72rem;
+    color: var(--text-tertiary);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    html { font-size: 15px; }
+    .container { padding: 40px 20px 80px; }
+    .hero h1 { font-size: 1.8rem; }
+    .section-title { font-size: 1.25rem; }
+    .card { padding: 20px; }
+    td, th { padding: 10px 12px; font-size: 0.72rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-label">人工智能考试</div>
+    <h1>主管题复习资料<span>扣子平台 · 机器学习 · 智能应用开发</span></h1>
+  </header>
+
+  <!-- ==================== 题目 1 ==================== -->
+  <h2 class="section-title">题目 1</h2>
+
+  <p>以含有异常值和缺失值的企业员工考勤数据为例，通过扣子平台搭建与实验要求相同的完整工作流，对比"数据预处理"与"无数据预处理"两个流程的分析结果，验证数据预处理对分析结论的影响。请结合给定的数据集，描述工作流的具体实现步骤。注意标明需要的工作节点及简要功能描述。</p>
+
+  <div class="card">
+    <div class="card-title">数据集</div>
+    <p class="no-indent" style="margin-bottom:0;">某企业的员工考勤记录，包括员工 ID、部门名称、打卡时间、考勤类型、请假天数、加班时长等信息。</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">参考：工作流节点功能对照表</div>
+  </div>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>步骤</th>
+          <th>名称</th>
+          <th>核心功能</th>
+          <th>操作重点</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>工作流创建与初始化</td>
+          <td>完成平台登录，搭建基础框架</td>
+          <td>明确工作流名称，简要描述分析目标（验证预处理对考勤分析结论的影响）</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>数据读取</td>
+          <td>接入目标数据集，为后续分析提供原始数据支持</td>
+          <td>正确配置文件路径、数据格式参数，确保考勤数据（员工 ID、部门名称、打卡时间等字段）完整读取</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>选择器节点</td>
+          <td>拆分分析分支，实现"有预处理"与"无预处理"的并行分析</td>
+          <td>设定分支判断条件，确保两条路径独立运行，考勤数据不交叉干扰</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>数据预处理代码节点</td>
+          <td>清洗原始数据，提升数据质量</td>
+          <td>针对性执行去重（重复打卡记录）、缺失值填充（打卡时间 / 请假天数）、异常值修正（不合理加班时长）等关键操作</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>大模型可视化</td>
+          <td>转化分析结果为直观报告，呈现核心分析指标</td>
+          <td>聚焦各部门考勤率、请假时长分布、加班时长统计三大核心维度，生成易对比的可视化图表</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>变量聚合与网页发布</td>
+          <td>整合两条分支的分析结果，提供可访问的成果载体</td>
+          <td>确保聚合后数据合为一个数据流，网页链接可正常打开</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>测试与对比</td>
+          <td>验证工作流有效性，核心对比预处理对分析结论的影响</td>
+          <td>试运行无报错后，重点对比两条路径下"各部门考勤行为差异"的一致性与偏差</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ==================== 题目 2 ==================== -->
+  <h2 class="section-title">题目 2</h2>
+
+  <p>某快递公司统计了 40 名快递员的"每日派送单数（件）与当日提成（元）"数据（提成规则为固定单价 + 基础提成，派送单数与提成呈严格线性关系），目标是通过派送单数快速计算提成，提高薪资核算效率。</p>
+
+  <p><strong>要求：</strong></p>
+
+  <p><strong>（一）</strong>请描述基于该数据集构建线性回归模型的完整机器学习流程，写出各核心步骤的目的与内容（注意：目的和内容都要有）。</p>
+
+  <p><strong>（二）</strong>另外，结合日常生活场景，再举一个符合线性回归核心特征的示例，重点指明示例中的自变量和因变量，并解释采用线性回归模型的依据。</p>
+
+  <div class="card">
+    <div class="card-title">参考</div>
+
+    <h3 class="sub-title">（一）线性回归机器学习流程</h3>
+
+    <p class="no-indent"><strong>数据预处理</strong></p>
+    <p>目的：规范数据格式、消除干扰因素，确保数据满足线性回归模型的输入要求。</p>
+    <p>内容包括：</p>
+    <ol>
+      <li>处理缺失值（如补充快递员未记录的派送单数或提成数据）；</li>
+      <li>检查和处理异常值（如剔除明显不合理的极端派送单数或提成金额）；</li>
+      <li>数据清洗（去除重复记录的快递员数据）。</li>
+    </ol>
+
+    <p class="no-indent"><strong>数据分析</strong></p>
+    <p>目的：探索数据内在规律，验证"派送单数"与"当日提成"的线性关联性，为建模提供依据。</p>
+    <p>内容包括：</p>
+    <ol>
+      <li>描述性统计：计算派送单数的均值、最大值、最小值，以及提成的均值、方差等统计特征；</li>
+      <li>数据可视化：绘制散点图，观察派送单数与提成是否呈现明显的线性趋势。</li>
+    </ol>
+
+    <p class="no-indent"><strong>数据集划分</strong></p>
+    <p>目的：分离训练数据与测试数据，避免模型过拟合，客观评估模型的泛化能力。</p>
+    <p>内容包括：</p>
+    <ol>
+      <li>按 7:3 或 8:2 的比例随机划分训练集和测试集，保证数据分布的一致性；</li>
+      <li>训练集用于模型学习派送单数与提成的线性映射关系，测试集用于检验模型在新数据上的预测准确性。</li>
+    </ol>
+
+    <p class="no-indent"><strong>创建模型</strong></p>
+    <p>目的：确定线性回归模型的参数（固定单价、基础提成），建立派送单数到提成的预测公式。</p>
+    <p>内容：</p>
+    <ol>
+      <li>定义线性回归模型：设提成 (y) = 固定单价 (w) × 派送单数 (x) + 基础提成 (b)，明确参数 w 和 b；</li>
+      <li>设定损失函数（如均方误差 MSE），衡量预测值与真实提成的偏差；</li>
+      <li>选择参数学习方法（如梯度下降法、最小二乘法），最小化损失函数；</li>
+      <li>输入训练集数据迭代训练，求解最优参数 w 和 b，得到最终预测模型。</li>
+    </ol>
+
+    <p class="no-indent"><strong>模型评估</strong></p>
+    <p>目的：量化模型的预测效果，判断是否满足薪资核算效率和准确性需求。</p>
+    <p>内容包括：在测试集上计算误差指标，如 MSE（均方误差）、R²（拟合优度），评估模型预测值与真实提成的贴合程度。</p>
+
+    <h3 class="sub-title">（二）日常生活的线性回归示例</h3>
+
+    <p class="no-indent"><strong>示例：</strong>超市苹果的购买重量与付款金额的关系</p>
+
+    <p class="no-indent"><strong>指明自变量和因变量</strong></p>
+    <ul>
+      <li><strong>自变量：</strong>苹果的购买重量（千克），是可主动控制和输入的量；</li>
+      <li><strong>因变量：</strong>付款金额（元），是由购买重量决定的输出量。</li>
+    </ul>
+
+    <p class="no-indent"><strong>采用线性回归的依据</strong></p>
+    <p>核心思想：自变量每增加一个单位，因变量按固定比例增加。苹果单价固定时，每多买 1 千克，付款金额就增加对应单价的金额，"购买重量增加 → 付款金额增加"呈现严格线性关系，完全符合线性回归"自变量与因变量线性相关"的核心特征。</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ==================== 题目 3 ==================== -->
+  <h2 class="section-title">题目 3</h2>
+
+  <p>请基于扣子（Coze）应用体平台，结合您所学专业，完成以下内容：</p>
+
+  <h3 class="sub-title">一、课题立项</h3>
+
+  <p class="no-indent"><strong>课题名称：</strong>基于大语言模型的汽车 CMF（色彩、材质、工艺）智能设计引擎开发</p>
+
+  <p class="no-indent"><strong>课题目标：</strong></p>
+  <p>利用生成式 AI 技术解决汽车设计前期调研中"感性意向"与"理性参数"转化效率低的问题。开发一个能够接收用户模糊风格词（如"未来主义"、"可持续感"），并自动产出符合工业生产逻辑的 CMF 报告（包含 HEX 色码、具体材质建议、表面处理工艺）的智能应用。</p>
+
+  <p class="no-indent"><strong>课题意义：</strong></p>
+  <p>理论层面：探索大模型在工业设计垂直领域的知识图谱映射能力，验证 RAG（检索增强生成）技术在 CMF 规范化表达中的准确性。实际应用层面：通过 AI 快速生成标准化的设计语言，降低设计师与工程师、供应商之间的沟通成本，提升设计决策的科学性，适配新能源汽车快速迭代的市场需求。</p>
+
+  <h3 class="sub-title">二、需求分析</h3>
+
+  <p class="no-indent"><strong>功能性需求：</strong></p>
+
+  <p class="no-indent"><strong>意向解析与生成功能：</strong>系统需准确识别用户的自然语言描述，并将其转化为结构化的 CMF 方案。</p>
+  <p>实现方式：配置大语言模型节点，通过语义分析将模糊词汇映射至专业设计词库。</p>
+
+  <p class="no-indent"><strong>专业参数自动化输出：</strong>系统需自动匹配并输出专业的 HEX 颜色代码及符合工业标准的材质名称。</p>
+  <p>实现方式：在模型节点配置系统提示词（System Prompt）约束输出格式，确保数据符合工业生产标准。</p>
+
+  <p class="no-indent"><strong>结果可视化渲染功能：</strong>生成的方案需以直观、专业的报表形式呈现。</p>
+  <p>实现方式：通过 Markdown 渲染组件绑定工作流输出变量，将非结构化文本转化为标准的设计表格。</p>
+
+  <p class="no-indent"><strong>非功能性需求：</strong></p>
+
+  <p class="no-indent"><strong>响应性能要求：</strong>系统需具备快速响应能力，单次工作流运行及结果返回时间需控制在 10 秒以内，保证设计调研的连续性。</p>
+
+  <p class="no-indent"><strong>易用性要求：</strong>界面设计需符合设计师习惯，操作流程极简，采用"一次输入、一次点击"即可获得完整报告的交互模式。</p>
+
+  <h3 class="sub-title">三、开发设计</h3>
+
+  <p class="no-indent"><strong>界面设计：</strong></p>
+  <p>布局逻辑：采用居中式纵向布局。顶部为应用标题，中部为核心交互区，底部为结果展示区。操作流程：用户在输入框填入设计风格关键词 → 点击"生成"按钮 → 触发后端工作流 → 界面组件自动更新并显示报告。界面元素：输入框：用于接收用户风格关键词。生成按钮：绑定工作流，设置为点击即触发。结果展示组件：用于渲染复杂的表格数据，将文本转化为标准的设计报告格式。</p>
+
+  <p class="no-indent"><strong>业务逻辑设计：</strong></p>
+  <p>工作流设计：开始节点：获取前端界面传来的 Input 变量。LLM 节点：结合预设的"资深汽车工业设计师"系统提示词，对字符串进行专业化扩充与逻辑映射。结束节点：封装最终的 Output 变量，将处理后的数据回传至前端组件。数据处理流程：采用"端到端"的自动化架构，各环节通过变量引用实现数据传递，确保从感性词汇到理性参数转化的一致性。</p>
+
+  <!-- Footer -->
+  <footer class="footer">
+    主管题复习资料 · 人工智能考试
+  </footer>
+
+</div>
+
+</body>
+</html>
